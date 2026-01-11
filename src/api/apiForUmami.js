@@ -39,7 +39,14 @@ export function umamiEventValues(eventName, startTime, platform) {
             propertyName: 'value',
             startAt: startTime,
             endAt: getCurrentTimestamp(),
-            filters: JSON.stringify([{property: 'platForm', operator: 'eq', value: platform}])
+            filters: JSON.stringify([
+                {
+                    type: 'property',
+                    name: 'platForm',      // 假设你的事件有 platform 属性
+                    operator: '==',
+                    value: platform
+                }
+            ])
         },
     })
 }
