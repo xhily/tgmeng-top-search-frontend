@@ -39,13 +39,7 @@ export function umamiEventValues(eventName, startTime, platform) {
             propertyName: 'value',
             startAt: startTime,
             endAt: getCurrentTimestamp(),
-            filters: [
-                {
-                    "property": "platForm",
-                    "operator": "eq",
-                    "value": platform
-                }
-            ]
+            filters: "%5B%7B%22property%22%3A%22platForm%22%2C%22operator%22%3A%22eq%22%2C%22value%22%3A%22" + platform + "%22%7D%5D"
         },
     })
 }
