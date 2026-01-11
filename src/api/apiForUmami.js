@@ -30,7 +30,7 @@ export function umamiStatsAll() {
     })
 }
 
-export function umamiEventValues(eventName,startTime) {
+export function umamiEventValues(eventName, startTime, platform) {
     return request({
         url: '/api/websites/4cd4a3c4-926a-4562-80f2-74022dfc93ef/event-data/values',
         method: 'get',
@@ -39,6 +39,11 @@ export function umamiEventValues(eventName,startTime) {
             propertyName: 'value',
             startAt: startTime,
             endAt: getCurrentTimestamp(),
+            filters: [
+                {
+                    "platForm": platform
+                }
+            ]
         },
     })
 }

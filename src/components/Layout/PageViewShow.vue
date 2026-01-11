@@ -143,13 +143,13 @@ export default {
 
       // 订阅平台配置
       subscriptionPlatforms: [
-        {key: 'FEISHU', label: '飞书', event: '订阅推送-飞书'},
-        {key: 'DINGDING', label: '钉钉', event: '订阅推送-钉钉'},
-        {key: 'QIYEWEIXIN', label: '企业微信', event: '订阅推送-企业微信'},
-        {key: 'TELEGRAM', label: 'Telegram', event: '订阅推送-TG'},
-        {key: 'NTFY', label: 'NTFY', event: '订阅推送-NTFY'},
-        {key: 'GOTIFY', label: 'GOTIFY', event: '订阅推送-GOTIFY'},
-        {key: 'WANGYIPOPO', label: '网易泡泡', event: '订阅推送-网易POPO'}
+        {key: 'FEISHU', label: '飞书', event: '订阅推送'},
+        {key: 'DINGDING', label: '钉钉', event: '订阅推送'},
+        {key: 'QIYEWEIXIN', label: '企业微信', event: '订阅推送'},
+        {key: 'TELEGRAM', label: 'Telegram', event: '订阅推送'},
+        {key: 'NTFY', label: 'NTFY', event: '订阅推送'},
+        {key: 'GOTIFY', label: 'GOTIFY', event: '订阅推送'},
+        {key: 'WANGYIPOPO', label: '网易泡泡', event: '订阅推送'}
       ]
     };
   },
@@ -228,7 +228,7 @@ export default {
     async loadPlatformsData(platforms, startTimestamp, dataKey) {
       const results = await Promise.all(
           platforms.map(platform =>
-              umamiEventValues(platform.event, startTimestamp)
+              umamiEventValues(platform.event, startTimestamp, platform.label)
                   .then(res => {
                     const result = res?.data;
                     return {
