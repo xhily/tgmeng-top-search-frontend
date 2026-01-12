@@ -27,7 +27,7 @@ export default function generateRSS(key) {
                 .then(res => res.text())
                 .then(text => {
                     console.log("=== 接口原始返回 ===");
-                    console.log(text.slice(0, 500)); // 看前 500 个字符
+                    console.log(text); // 看前 500 个字符
 
                     // 再尝试解析 JSON（不成功就进 catch）
                     return JSON.parse(text);
