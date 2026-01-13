@@ -41,8 +41,8 @@ export default function generateRSS(key) {
     // ✅ 检查是否是父分类（有 children 的节点）
     if (info.children) {
         // 列出所有子平台
-        const childKeys = Object.keys(info.children);
-        const childList = childKeys.map(k => `  - ${k}/rss.xml`).join('\n');
+        // const childKeys = Object.keys(info.children);
+        // const childList = childKeys.map(k => `  - ${k}/rss.xml`).join('\n');
 
         return Promise.resolve(`<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -51,13 +51,8 @@ export default function generateRSS(key) {
         <description>此分类下有多个子平台，请访问具体的子平台RSS</description>
         <link>https://tgmeng.com</link>
         <item>
-            <title>可用的子平台RSS</title>
-            <description>
-                <![CDATA[
-                <p>请访问以下具体平台的RSS：</p>
-                <pre>${childList}</pre>
-                ]]>
-            </description>
+            <title>错误</title>
+            <description>请访问具体平台的RSS，例如: /news/tencent/rss.xml</description>
         </item>
     </channel>
 </rss>`);
