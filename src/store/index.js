@@ -1008,7 +1008,7 @@ export default createStore({
             { id: 15, name: '吃⃰货⃰', avatar: require('@/assets/avatars/project/chihuo.png'), amount: 50, message: '喜欢这个网站，支持你。', time: '2026-01-14 22:42' },
             { id: 15, name: '(*)', avatar: require('@/assets/avatars/project/default.png'), amount: 10, message: '为知识付费。', time: '2026-01-16 13:50' },
             { id: 15, name: 'Cee', avatar: require('@/assets/avatars/project/Cee.png'), amount: 5, message: '感谢创作。', time: '2026-01-16 18:06' },
-            { id: 15, name: '*龙', avatar: require('@/assets/avatars/project/default.png'), amount: 5, message: '感谢分享', time: '2026-01-17 11:29' },
+            { id: 15, name: '*龙', avatar: require('@/assets/avatars/project/default.png'), amount: 5, message: '无', time: '2026-01-17 11:29' },
             { id: 15, name: 'Duze', avatar: require('@/assets/avatars/project/Duze.png'), amount: 5, message: '感谢分享', time: '2026-01-19 17:20' },
         ]
 
